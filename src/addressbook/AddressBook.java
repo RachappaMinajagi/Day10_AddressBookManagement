@@ -55,33 +55,33 @@ public class AddressBook {
 						System.out.println("------------------------------------");
 
 						ListIterator<Contacts> listIterator = array.listIterator();
-
+						
 						while (listIterator.hasNext()) {
 							contact = listIterator.next();
-
+							
 							if (contact.getFirstName().equals(firstName1)) {
 
 								System.out.print("Enter new first Name: ");
 								firstName1 = sc1.nextLine();
-
+								
 								System.out.print("Enter new last Name: ");
 								lastName = sc1.nextLine();
-
+								
 								System.out.print("Enter your new address: ");
 								address = sc1.nextLine();
-
+								
 								System.out.print("Enter your new city: ");
 								city = sc1.nextLine();
-
+								
 								System.out.print("Enter your state: ");
 								state = sc1.nextLine();
-
+								
 								System.out.print("Enter zip code : ");
 								zipcode = sc.nextInt();
-
+								
 								System.out.print("Enter phone number: ");
 								phoneNo = sc1.nextLine();
-
+								
 								System.out.print("Enter your email ID: ");
 								email = sc1.nextLine();
 								listIterator.set(new Contacts(firstName1, lastName, address, city, state, zipcode,
@@ -89,14 +89,14 @@ public class AddressBook {
 								found = true;
 							}
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 						if (!found) {
 							System.out.println("Record not found");
 						} else {
 							System.out.println("Record is updated successfully");
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						break;
 					// To Delete Contact
 					case 4:
@@ -112,13 +112,13 @@ public class AddressBook {
 								found = true;
 							}
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.err.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						if (!found) {
 							System.out.println("Record not found");
 						} else {
 							System.out.println("Record is deleted successfully");
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						break;
 
 					default:

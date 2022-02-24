@@ -5,7 +5,6 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class AddressBook {
-
 	public static void main(String[] args) {
 		System.out.println("Welcome to the address book system");
 		ArrayList<Contacts> array = new ArrayList<Contacts>();
@@ -56,39 +55,33 @@ public class AddressBook {
 						System.out.println("------------------------------------");
 
 						ListIterator<Contacts> listIterator = array.listIterator();
-						/*
-						 * It is a java iterator which is used to traverse all types of lists including
-						 * ArrayList, Vector, LinkedList, Stack
-						 */
 
 						while (listIterator.hasNext()) {
 							contact = listIterator.next();
-							/*
-							 * Entering the condition if firstname matches
-							 */
+
 							if (contact.getFirstName().equals(firstName1)) {
 
 								System.out.print("Enter new first Name: ");
 								firstName1 = sc1.nextLine();
-								
+
 								System.out.print("Enter new last Name: ");
 								lastName = sc1.nextLine();
-								
+
 								System.out.print("Enter your new address: ");
 								address = sc1.nextLine();
-								
+
 								System.out.print("Enter your new city: ");
 								city = sc1.nextLine();
-								
+
 								System.out.print("Enter your state: ");
 								state = sc1.nextLine();
-								
+
 								System.out.print("Enter zip code : ");
 								zipcode = sc.nextInt();
-								
+
 								System.out.print("Enter phone number: ");
 								phoneNo = sc1.nextLine();
-								
+
 								System.out.print("Enter your email ID: ");
 								email = sc1.nextLine();
 								listIterator.set(new Contacts(firstName1, lastName, address, city, state, zipcode,
@@ -96,21 +89,21 @@ public class AddressBook {
 								found = true;
 							}
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 						if (!found) {
 							System.out.println("Record not found");
 						} else {
 							System.out.println("Record is updated successfully");
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						break;
 					// To Delete Contact
 					case 4:
 						found = false;
 						System.out.println("Enter first name of the person for delete ");
 						firstName1 = sc1.nextLine();
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						iterator = array.iterator();
 						while (iterator.hasNext()) {
 							contact = iterator.next();
@@ -119,13 +112,13 @@ public class AddressBook {
 								found = true;
 							}
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						if (!found) {
 							System.out.println("Record not found");
 						} else {
 							System.out.println("Record is deleted successfully");
 						}
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 						break;
 
 					default:

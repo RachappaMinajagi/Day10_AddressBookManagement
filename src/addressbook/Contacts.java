@@ -40,7 +40,8 @@ public class Contacts {
 						String phoneNo = sc1.nextLine();
 						System.out.print("Enter your email: ");
 						String email = sc1.nextLine();
-						Contacts contact = new Contacts(firstName, lastName, address, city, state, zipcode, phoneNo,email);
+						Contacts contact = new Contacts(firstName, lastName, address, city, state, zipcode, phoneNo,
+								email);
 						array.add(contact);
 						break;
 					case 2:

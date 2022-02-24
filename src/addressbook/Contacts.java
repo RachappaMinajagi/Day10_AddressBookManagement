@@ -1,63 +1,102 @@
 package addressbook;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+public class Contacts {
 
-public class AddressBook {
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String city;
+	private String state;
+	private String zip;
+	private String phoneNumber;
+	private String email;
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to the address book system");
-		ArrayList<Contacts> array = new ArrayList<Contacts>();
-		try (Scanner sc = new Scanner(System.in)) {
-			try (Scanner sc1 = new Scanner(System.in)) {
-				int choice;
-				do {
-					System.out.println("1.INSERT");
-					System.out.println("2.DISPLAY");
-					System.out.println("Enter your choice");
-					choice = sc.nextInt();
+	/*
+	 * taking parameterized constructor to pass the values of contacts
+	 */
+	public Contacts(String firstName, String lastName, String address, String city, String state, String zip,
+			String phoneNumber, String email) {
+		super();
 
-					/*
-					 * Using SwitchCase
-					 */
-
-					switch (choice) {
-					case 1:
-						System.out.print("Enter First Name: ");
-						String firstName = sc1.nextLine();
-
-						System.out.print("Enter last Name: ");
-						String lastName = sc1.nextLine(); // Create object for AddressBook for Person
-
-						System.out.print("Enter your address: ");
-						String address = sc1.nextLine();
-
-						System.out.print("Enter your city: ");
-						String city = sc1.nextLine();
-
-						System.out.print("Enter your state: ");
-						String state = sc1.nextLine();
-
-						System.out.print("Enter zip code : ");
-						int zipcode = sc.nextInt();
-
-						System.out.print("Enter phone number: ");
-						String phoneNo = sc1.nextLine();
-
-						System.out.print("Enter your email: ");
-						String email = sc1.nextLine();
-
-						Contacts contact = new Contacts(firstName, lastName, address, city, state, zipcode, phoneNo,
-								email);
-						array.add(contact);
-						break;
-					case 2:
-						System.out.println(array);
-						break;
-					}
-				} while (choice != 0);
-				System.out.println("Invalid Choice!!!");
-			}
-		}
+		/*
+		 * this keyword is pointing to the class variables
+		 */
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
 	}
+
+	/*
+	 * getter setter method is used to getting and setting the values The get method
+	 * returns the variable value, and the set method sets the value.
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 }

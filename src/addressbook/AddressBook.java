@@ -54,7 +54,7 @@ public class AddressBook {
 					case 2:
 						System.out.println(array);
 						break;
-					}
+					} 
 				} while (choice != 0);
 				System.out.println("Invalid Choice!!!");
 			}
